@@ -5,6 +5,7 @@ from PIL import Image
 
 DATASET_PATH = "dataset/notMNIST_small"
 
+
 def load_images(path, max_images_per_class=100):
     images = []
     labels = []
@@ -26,6 +27,7 @@ def load_images(path, max_images_per_class=100):
             except:
                 continue
     return np.array(images), np.array(labels), classes
+
 
 if __name__ == "__main__":
     X, y, class_names = load_images(DATASET_PATH)
