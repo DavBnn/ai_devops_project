@@ -24,7 +24,7 @@ def load_images(path, max_images_per_class=100):
                 images.append(np.array(img))
                 labels.append(label)
                 count += 1
-            except:
+            except Exception:
                 continue
     return np.array(images), np.array(labels), classes
 

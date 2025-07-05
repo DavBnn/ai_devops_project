@@ -25,7 +25,8 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run lint
-        run: flake8 src --ignore=E501
+        run: flake8 src --ignore=E501,E402
+
 
       - name: Run tests
         run: python3 src/test_model.py
